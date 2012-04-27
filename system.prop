@@ -1,5 +1,5 @@
 #
-# system.prop for toro
+# system.prop for toroplus
 #
 
 rild.libpath=/vendor/lib/libsec-ril_lte.so

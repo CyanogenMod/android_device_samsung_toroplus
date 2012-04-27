@@ -1,4 +1,4 @@
-# BCM4330 B2 FCBGA SS Proxima VZW Rev1.1 11/28/2011 Calibrated verified with 125.84.4 // BT Choppy issue fixed
+# BCM4330 B2 FCBGA SS Proxima Sprint Rev0.3 2G 5G Power up for TRP s<2/4/2012>
 manfid=0x2d0
 prodid=0x0532
 vendid=0x14e4
@@ -11,15 +11,15 @@ nocrc=1
 xtalfreq=37400
 boardnum=21
 macaddr=00:90:4c:c5:12:38
-ag0=0
+ag0=253
 # aa2g=1 means by default only one antenna, MAIN RF.
 aa2g=1
 aa5g=1
 ccode=US
 regrev=69
 # 2.4GHz PA parameters are preliminary
-pa0b0=0x1491
-pa0b1=0xFD9D
+pa0b0=0x0F11
+pa0b1=0xFE0B
 pa0b2=0xFF64
 cckPwrOffset=4
 # rssi params for 2.4GHz
@@ -30,28 +30,28 @@ rssisav2g=0x7
 rssismf5g=0xa
 rssismc5g=0x7
 rssisav5g=0x1
-#PA parameters for lower a-band: CH.36 (5180M) - CH.64 (5320M)
-pa1lob0=0x14B9
-pa1lob1=0xFD79
+#PA parameters for lower a-band: CH.36 (5180M) - CH.64 (5320M) - 4dB up
+pa1lob0=0x10B9
+pa1lob1=0xFDCD
 pa1lob2=0xFF59
-#PA parameters for midband: CH.100 (5500M) - CH.140 (5700M)
-pa1b0=0x14C5
-pa1b1=0xFD72
+#PA parameters for midband: CH.100 (5500M) - CH.140 (5700M) - 4dB up
+pa1b0=0x10C5
+pa1b1=0xFDC8
 pa1b2=0xFF54
-#PA parameters for high band: CH.149 (5745M) - CH.165 (5825M)
-pa1hib0=0x148E
-pa1hib1=0xFD6B
+#PA parameters for high band: CH.149 (5745M) - CH.165 (5825M) - 4dB up
+pa1hib0=0x108E
+pa1hib1=0xFDC7
 pa1hib2=0xFF49
 sromrev=3
-# 2.4G Tx Power: 17/14/13
-maxp2ga0=74
-ofdm2gpo=0x66666666
-mcs2gpo0=0x8888
-mcs2gpo1=0x8888
-# 5G Tx Power: 14/13
-maxp5ga0=74
-maxp5gla0=74
-maxp5gha0=74
+# 2.4G Tx Power: 14.5/11/10
+maxp2ga0=64
+ofdm2gpo=0x77777777
+mcs2gpo0=0x9999
+mcs2gpo1=0x9999
+# 5G Tx Power: 10/9
+maxp5ga0=64
+maxp5gla0=64
+maxp5gha0=64
 ofdm5gpo=0x66666666
 ofdm5glpo=0x66666666
 ofdm5ghpo=0x66666666
@@ -109,3 +109,10 @@ txgaintbl5g=1
 
 # 5G 1.7G Spur
 loidacmode5g=1
+
+# 2.4G ACR
+rxgaintbl100=1
+
+# 5GHz Starting Tx Gain Index
+initxidx5g=96
+
