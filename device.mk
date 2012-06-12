@@ -21,6 +21,16 @@
 # use toro device as base so in upgrades we will upgrade both at once
 $(call inherit-product, device/samsung/tuna/device.mk)
 
+# Telephony property for CDMA
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.cdma.home.operator.numeric=310120 \
+    ro.cdma.home.operator.alpha=Sprint \
+    ro.telephony.default_network=4
+
+# Hardware-specific features
+PRODUCT_COPY_FILES += \
+    frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
+
 # APNs for 3G network access
 PRODUCT_COPY_FILES += \
     device/samsung/toroplus/plus-apns-conf.xml:system/etc/apns-conf.xml
