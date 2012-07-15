@@ -21,9 +21,7 @@
 # lines, full and toro, hence its name.
 #
 
-# Camera
 PRODUCT_PACKAGES := \
-    Camera \
     Gallery \
     GNexusParts
 
@@ -31,7 +29,7 @@ PRODUCT_PACKAGES := \
 PRODUCT_COPY_FILES += \
     device/samsung/toroplus/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
     device/samsung/toroplus/plus-apns-conf.xml:system/etc/apns-conf.xml \
-    frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)

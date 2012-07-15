@@ -29,7 +29,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Hardware-specific features
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
 
 # APNs for 3G network access
 PRODUCT_COPY_FILES += \
