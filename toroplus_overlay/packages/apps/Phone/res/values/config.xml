@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<!-- Crespo4g - specific phone app resources. -->
+<!-- Toroplus - specific phone app resources. -->
 <resources>
 
     <!-- Flag indicating if tty is enabled -->
@@ -24,6 +24,6 @@
     <bool name="config_voice_privacy_disable">true</bool>
 
     <!-- Sprint Message Wait Indicator Quirk -->
-    <!--<bool name="sprint_mwi_quirk">true</bool>-->
+    <bool name="sprint_mwi_quirk">true</bool>
 
 </resources>
