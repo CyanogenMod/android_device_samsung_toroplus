@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),toro)
+ifeq ($(TARGET_DEVICE),toroplus)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := pvrsrvctl
