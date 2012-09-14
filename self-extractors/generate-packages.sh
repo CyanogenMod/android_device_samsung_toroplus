@@ -99,18 +99,15 @@ do
     TO_EXTRACT="\
             system/app/BIP.apk \
             system/app/CellBroadcastReceiver.apk \
-            system/app/IMSFramework.apk \
-            system/app/RTN.apk \
             system/app/SDM.apk \
-            system/app/SPG.apk \
+            system/app/SecPhone.apk
+            system/app/Stk.apk \
             system/app/SyncMLSvc.apk \
             system/bin/fRom \
             system/lib/libsecril-client.so \
             system/lib/libsyncml_core.so \
             system/lib/libsyncml_port.so \
             system/lib/lib_gsd4t.so \
-            system/vendor/lib/libims.so \
-            system/vendor/lib/libims_jni.so \
             system/vendor/lib/libsec-ril_lte.so \
             "
     ;;
