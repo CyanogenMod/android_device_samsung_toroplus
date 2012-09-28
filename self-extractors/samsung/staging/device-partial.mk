@@ -15,16 +15,13 @@
 # Samsung blob(s) necessary for ToroPlus hardware
 PRODUCT_PACKAGES := \
     BIP \
-    IMSFramework \
-    RTN \
     SDM \
-    SPG \
+    SecPhone \
+    SprintExtension \
     SyncMLSvc \
     fRom \
     libsecril-client \
     libsyncml_core \
     libsyncml_port \
     lib_gsd4t \
-    libims \
-    libims_jni \
     libsec-ril_lte
