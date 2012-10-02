@@ -16,7 +16,7 @@
 
 (cd ../../../../out/target/product/toroplus ; zip -r ../../../../device/samsung/toroplus/self-extractors/full_toroplus-pseudo_ota.zip system)
 ZIP=full_toroplus-pseudo_ota.zip
-BUILD=jzo54i
+BUILD=jzo54k
 ROOTDEVICE=toroplus
 DEVICE=toroplus
 MANUFACTURER=samsung
