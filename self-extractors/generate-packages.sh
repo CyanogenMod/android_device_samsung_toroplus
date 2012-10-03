@@ -14,42 +14,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# 189728 = IRK82
-# 201178 = IRL10B
-# 213821 = ICL26
-# 221202 = ICL39
-# 236517 = IML70C
-# 237179 = IML73
-# 237867 = IML74B
-# 238432 = IML74E
-# 238649 = IML74G
-# 239410 = IML74K
-# 262866 = IMM30D
-# 299849 = IMM76D
-# end ics-mr1
-# start jb-dev
-# 241968 = IRM03
-# 397816 = JRO03B
-# 398337 = JRO03C
-# 405518 = JRO03H
-# 463694 = JZO54G
-# end jb-dev
-BRANCH=jb-dev
-if test $BRANCH=ics-mr1
-then
-  ZIP=mysid-ota-299849.zip
-  BUILD=imm76d
-fi #ics-mr1
-if test $BRANCH=jb-dev
-then
-  ZIP=mysid-ota-463694.zip
-  BUILD=jzo54g
-fi # jb-dev
+(cd ../../../../out/target/product/toroplus ; zip -r ../../../../device/samsung/toroplus/self-extractors/full_toroplus-pseudo_ota.zip system)
+ZIP=full_toroplus-pseudo_ota.zip
+BUILD=jzo54k
 ROOTDEVICE=toroplus
 DEVICE=toroplus
 MANUFACTURER=samsung
 
-for COMPANY in broadcom csr imgtec invensense nxp ti
+for COMPANY in broadcom csr imgtec invensense nxp samsung ti
 do
   echo Processing files from $COMPANY
   rm -rf tmp
@@ -98,10 +70,9 @@ do
   samsung)
     TO_EXTRACT="\
             system/app/BIP.apk \
-            system/app/CellBroadcastReceiver.apk \
             system/app/SDM.apk \
-            system/app/SecPhone.apk
-            system/app/Stk.apk \
+            system/app/SecPhone.apk \
+            system/app/SprintExtension.apk \
             system/app/SyncMLSvc.apk \
             system/bin/fRom \
             system/lib/libsecril-client.so \
