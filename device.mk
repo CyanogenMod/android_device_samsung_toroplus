@@ -36,8 +36,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/toroplus/plus-apns-conf.xml:system/etc/apns-conf.xml
 
 # Overlay for WiMAX-related settings
-DEVICE_PACKAGE_OVERLAYS += device/samsung/toroplus/toroplus_overlay \
-                           device/samsung/toroplus/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/toroplus/overlay
 
 # Add Toro spring specific device configuration
 $(call inherit-product-if-exists, vendor/samsung/toroplus/device-vendor.mk)
