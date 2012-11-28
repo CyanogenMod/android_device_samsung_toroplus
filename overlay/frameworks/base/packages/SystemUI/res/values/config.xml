@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-** Copyright 2011, The Android Open Source Project
+** Copyright 2009, The Android Open Source Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -17,11 +17,14 @@
 */
 -->
 
-<!-- sojus-specific SystemUI resources -->
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds. -->
 <resources>
-    <!-- Sprint shows phone (voice) signal strength instead of data in mobile RSSI. -->
+
+    <!-- When true, show 1/2G networks as 3G. -->
+    <bool name="config_showMin3G">true</bool>
+
+    <!-- Show phone (voice) signal strength instead of data in mobile RSSI. -->
     <bool name="config_showPhoneRSSIForData">true</bool>
 
-    <!-- Show 1/2G networks as 3G on Sprint. -->
-    <bool name="config_showMin3G">true</bool>
 </resources>

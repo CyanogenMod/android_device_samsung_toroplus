@@ -15,8 +15,32 @@
 */
 -->
 
-<!-- Note that IconMode can be only 0, ON or 1, FLASHING
-     The icon is turned OFF if then IconIndex = 1 -->
+<!-- Definitions:
+    IconIndex = 0 -> ROAMING_INDICATOR_ON, stat_sys_roaming_cdma_0
+    IconIndex = 1 -> ROAMING_INDICATOR_OFF, roaming icon not displayed
+    IconIndex = 2 -> ROAMING_INDICATOR_FLASH, 
+    IconIndex >= 2 -> OEM/Operator defined icons defaulted to stat_sys_roaming_cdma_0
+        (OEM/Operator may need to modify sRoamingIndicatorImages_cdma in StatusBarPolicy
+        to add specific icons)
+        
+    IconMode = 0 -> ROAMING_ICON_MODE_NORMAL
+    IconMode = 1 -> ROAMING_ICON_MODE_FLASH, default to stat_sys_roaming_cdma_flash
+        IconMode = 1 should not be used with IconIndex = 0 and IconIndex = 1
+        (OEM/Operator may need to modify sRoamingIndicatorImages_cdma in StatusBarPolicy
+        to add specific flashing icons)
+
+    BannerStyle = 0 -> BANNER_STYLE_SOLID
+    BannerStyle = 1 -> BANNER_STYLE_FLASH
+    Data/CallGuardStatus = 0 -> DATA_/CALL_GUARD_OFF
+    Data/CallGuardStatus = 1 -> DATA_/CALL_GUARD_ON
+    Ringer = 0 -> RINGER_STATUS_OFF
+    Ringer = 1 -> RINGER_STATUS_ON
+
+    StatusBarPolicy checks mismatches on:
+    1) iconMode == ROAMING_ICON_MODE_FLASH but iconIndex == ROAMING_INDICATOR_OFF
+    2) iconMode == ROAMING_ICON_MODE_NORMAL but iconIndex == ROAMING_INDICATOR_FLASH
+    3) iconMode == ROAMING_ICON_MODE_FLASH but iconIndex == ROAMING_INDICATOR_ON
+-->
 
 <EriFile VersionNumber="1357"
          NumberOfEriEntries="176"
