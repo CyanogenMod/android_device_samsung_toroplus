@@ -85,9 +85,6 @@
          If false, not supported. -->
     <bool name="config_duplicate_port_omadm_wappush">true</bool>
 
-    <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
-    <bool name="config_cellBroadcastAppLinks">true</bool>
-
     <!-- Default network policy warning threshold, in megabytes. -->
     <integer name="config_networkPolicyDefaultWarning">51200</integer>
 
