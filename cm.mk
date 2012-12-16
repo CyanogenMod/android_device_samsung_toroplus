@@ -8,6 +8,9 @@ TARGET_SCREEN_WIDTH := 720
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
+# Inherit CDMA common stuff
+$(call inherit-product, vendor/cm/config/cdma.mk)
+
 # Inherit device configuration
 $(call inherit-product, device/samsung/toroplus/full_toroplus.mk)
 
