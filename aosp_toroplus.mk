@@ -1,4 +1,5 @@
-# Copyright (C) 2010 The Android Open Source Project
+#
+# Copyright 2013 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,14 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
+$(call inherit-product, device/samsung/toroplus/full_toroplus.mk)
 
-LOCAL_STEM := toroplus/BoardConfigPartial.mk
-
--include vendor/broadcom/$(LOCAL_STEM)
--include vendor/csr/$(LOCAL_STEM)
--include vendor/imgtec/$(LOCAL_STEM)
--include vendor/invensense/$(LOCAL_STEM)
--include vendor/nxp/$(LOCAL_STEM)
--include vendor/samsung/$(LOCAL_STEM)
--include vendor/ti/$(LOCAL_STEM)
--include vendor/widevine/$(LOCAL_STEM)
+PRODUCT_NAME := aosp_toroplus

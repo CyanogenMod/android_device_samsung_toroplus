@@ -1,4 +1,4 @@
-# Copyright (C) 2010 The Android Open Source Project
+# Copyright (C) 2011 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,13 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_STEM := toroplus/BoardConfigPartial.mk
+LOCAL_PATH := $(call my-dir)
 
--include vendor/broadcom/$(LOCAL_STEM)
--include vendor/csr/$(LOCAL_STEM)
--include vendor/imgtec/$(LOCAL_STEM)
--include vendor/invensense/$(LOCAL_STEM)
--include vendor/nxp/$(LOCAL_STEM)
--include vendor/samsung/$(LOCAL_STEM)
--include vendor/ti/$(LOCAL_STEM)
--include vendor/widevine/$(LOCAL_STEM)
+ifeq ($(TARGET_DEVICE),toroplus)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libdrmdecrypt
+LOCAL_SRC_FILES := libdrmdecrypt.so
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(TARGET_OUT)/lib
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := widevine
+include $(BUILD_PREBUILT)
+
+endif

@@ -16,12 +16,12 @@
 
 (cd ../../../../out/target/product/toroplus ; zip -r ../../../../device/samsung/toroplus/self-extractors/full_toroplus-pseudo_ota.zip system)
 ZIP=full_toroplus-pseudo_ota.zip
-BUILD=jzo54k
+BUILD=20130220
 ROOTDEVICE=toroplus
 DEVICE=toroplus
 MANUFACTURER=samsung
 
-for COMPANY in broadcom csr imgtec invensense nxp samsung ti
+for COMPANY in broadcom imgtec invensense nxp samsung widevine # csr ti
 do
   echo Processing files from $COMPANY
   rm -rf tmp
@@ -85,6 +85,11 @@ do
   ti)
     TO_EXTRACT="\
             system/vendor/firmware/ducati-m3.bin \
+            "
+    ;;
+  widevine)
+    TO_EXTRACT="\
+            system/lib/libdrmdecrypt.so \
             "
     ;;
   esac

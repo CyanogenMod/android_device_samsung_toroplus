@@ -1,4 +1,6 @@
-# Copyright (C) 2010 The Android Open Source Project
+#!/bin/sh
+
+# Copyright 2012 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,13 +14,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_STEM := toroplus/BoardConfigPartial.mk
-
--include vendor/broadcom/$(LOCAL_STEM)
--include vendor/csr/$(LOCAL_STEM)
--include vendor/imgtec/$(LOCAL_STEM)
--include vendor/invensense/$(LOCAL_STEM)
--include vendor/nxp/$(LOCAL_STEM)
--include vendor/samsung/$(LOCAL_STEM)
--include vendor/ti/$(LOCAL_STEM)
--include vendor/widevine/$(LOCAL_STEM)
+source ../../../common/clear-factory-images-variables.sh
+PRODUCT=toroplus
+DEVICE=toroplus
+BUILD=fh05
+VERSION=fh05
+SRCPREFIX=signed-
+BOOTLOADER=primelc03
+BOOTLOADERFILE=bootloader-toroplus.img
+RADIO=l700.fc12
+RADIOFILE=radio-toroplus.img
+CDMARADIO=l700.fc12
+CDMARADIOFILE=radio-cdma-toroplus.img
+source ../../../common/generate-factory-images-common.sh
