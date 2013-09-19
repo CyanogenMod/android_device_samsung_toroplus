@@ -19,4 +19,7 @@
 
 #define BTM_DEF_LOCAL_NAME   "Galaxy Nexus"
 
+#define BLE_INCLUDED TRUE
+#define BTA_GATT_INCLUDED TRUE
+#define SMP_INCLUDED TRUE
 #endif
