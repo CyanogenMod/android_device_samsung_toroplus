@@ -1,0 +1,9 @@
+app/BIP.apk
+app/HiddenMenu.apk
+app/SDM.apk
+app/SecPhone.apk
+app/SyncMLSvc.apk
+lib/lib_gsd4t.so
+lib/libsyncml_core.so
+lib/libsyncml_port.so
+vendor/lib/libsec-ril_lte.so
