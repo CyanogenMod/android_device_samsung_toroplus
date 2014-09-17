@@ -1,7 +1,6 @@
 #
 # system.prop for toroplus
 #
-
 rild.libpath=/vendor/lib/libsec-ril_lte.so
 rild.libargs=-d /dev/ttys0
 telephony.lteOnCdmaDevice=1
@@ -18,6 +17,3 @@ ro.ril.ecclist=112,911,#911,*911
 #Operator values
 ro.cdma.home.operator.alpha=Sprint
 ro.cdma.home.operator.numeric=310120
-
-# GPU producer to CPU consumer not supported
-ro.bq.gpu_to_cpu_unsupported=1
