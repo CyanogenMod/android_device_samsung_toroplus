@@ -8,8 +8,24 @@ telephony.lteOnCdmaDevice=1
 # Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
 ro.telephony.call_ring.multiple=0
 
+# Set CDMA SUBSCRIPTION SOURCE to RUIM in Database for this device
+ro.telephony.default_cdma_sub=0
+
+# Invokes parameters for needsOldRilFeature to fix Toroplus radio
+ro.telephony.ril.config=usevoicetechfordata
+
+# Turn on IMS by default
+persist.radio.imsregrequired=1
+persist.radio.imsallowmtsms=1
+
+# Store correct IMSI when retreived from SIMRecords and use it for Ruim Records
+ro.telephony.get_imsi_from_sim=true
+
 # Default network
 ro.telephony.default_network=4
+
+# Don't consider Out Of Service as data call disconnect
+persist.telephony.oosisdc=false
 
 # Default ecclist
 ro.ril.ecclist=112,911,#911,*911
