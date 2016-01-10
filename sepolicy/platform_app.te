@@ -1,0 +1,2 @@
+# allow proprietary apps for toroplus radio
+allow platform_app rild:unix_stream_socket connectto;
