@@ -1,0 +1,3 @@
+# system_app, proprietary app for toroplus radio
+allow system_app rild:unix_stream_socket connectto;
+allow system_app system_app_data_file:sock_file { create write unlink };
