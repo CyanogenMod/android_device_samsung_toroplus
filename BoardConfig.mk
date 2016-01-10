@@ -30,3 +30,11 @@ BOARD_INVENSENSE_APPLY_COMPASS_NOISE_FILTER := true
 
 # libsec-ril_lte.so is broke due to a missing symbol in surfacecomposerclient
 TARGET_TOROPLUS_RADIO := true
+
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+	device/samsung/toro/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+	rild.te \
+	system_app.te
