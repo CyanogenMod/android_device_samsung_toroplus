@@ -1,0 +1,3 @@
+allow rild proc_net:file write;
+allow rild sysfs:file write;
+allow rild system_data_file:sock_file { unlink create };
