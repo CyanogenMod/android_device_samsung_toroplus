@@ -34,8 +34,3 @@ BOARD_PROVIDES_ADDITIONAL_BIONIC_STATIC_LIBS := libsecril_global_symbols
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/toroplus/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    rild.te \
-    system_app.te \
-    platform_app.te
