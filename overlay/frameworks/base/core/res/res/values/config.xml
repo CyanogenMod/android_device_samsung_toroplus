@@ -91,4 +91,18 @@
     <!-- Set to true if the RSSI should always display CDMA signal strength -->
     <bool name="config_alwaysUseCdmaRssi">true</bool>
 
+    <!-- The VoiceMail default value is displayed to my own number if it is true -->
+    <bool name="config_telephony_use_own_number_for_voicemail">true</bool>
+
+    <!-- MMS user agent string -->
+    <string name="config_mms_user_agent" translatable="false">SPH-L700/Android-mms</string>
+
+    <!-- MMS user agent profile url -->
+    <string name="config_mms_user_agent_profile_url" translatable="false">http://device.sprintpcs.com/Samsung/SPH-L700/latest</string>
+
+    <!-- The RadioAccessFamilies supported by the device.
+         Empty is viewed as "all".  Only used on devices which
+         don't support RIL_REQUEST_GET_RADIO_CAPABILITY
+         format is UMTS|LTE|... -->
+    <string translatable="false" name="config_radio_access_family">LTE|CDMA|EVDO</string>
 </resources>
