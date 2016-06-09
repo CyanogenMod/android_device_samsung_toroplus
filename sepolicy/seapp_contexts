@@ -1,0 +1,2 @@
+# run BIP in radio domain
+user=_app seinfo=platform name=com.android.bip domain=radio
